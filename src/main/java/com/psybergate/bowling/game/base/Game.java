@@ -1,10 +1,11 @@
 package com.psybergate.bowling.game.base;
 
 /**
- * A game of tenpin bowling game.
+ * A game of ten-pin bowling game.
  */
 public interface Game {
 
+	final int NUMBER_OF_PINS = 10;
     /**
      * Called each time the player rolls a ball.
      *
@@ -15,13 +16,7 @@ public interface Game {
     /**
      * Called only at the very end of the game.
      *
-     * @return The total score for that game.
+     * @return The total score for each game.
      */
     int score();
-
-    /**
-     * @return The number of frames in this game.
-     */
-    int size();
-
 }

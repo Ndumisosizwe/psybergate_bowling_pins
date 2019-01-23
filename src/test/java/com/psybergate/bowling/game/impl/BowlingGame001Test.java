@@ -1,35 +1,27 @@
 package com.psybergate.bowling.game.impl;
 
-import com.psybergate.bowling.game.base.Game;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import com.psybergate.bowling.game.base.Game;
 
 public class BowlingGame001Test {
 
-    private Game game;
+	private Game game;
 
-    @Before
-    public void setUp() throws Exception {
-        this.game = new BowlingGame001();
-    }
+	@Before
+	public void setUp() throws Exception {
+		this.game = new BowlingGame001();
+	}
 
-    @Test
-    public void testNewGameShouldHave10FramesAfterCreation() {
-        assertEquals(10, game.size());
-    }
-
-    @Test
-    public void shouldAlwaysResultToScoreOfLessThan10PerFrame() {
-        for (int i = 0; i < 2; i++) {
-            game.roll(5);
-        }
-        assertEquals(10, game.score());
-    }
-
-    @Test
-    public void score() {
-        assertEquals(1, 1);
-    }
+	@Test
+	public void testShouldKeepTrackOfCorrectNumberOfPins() {
+		int numberOfPinsKnockedDownOnFirstRoll = 4;
+		game.roll(numberOfPinsKnockedDownOnFirstRoll);
+		game.roll(8);// should be ignored, since greater than remaining pins.
+		game.roll(2);
+		assertEquals(6, game.score());
+	}
 }
