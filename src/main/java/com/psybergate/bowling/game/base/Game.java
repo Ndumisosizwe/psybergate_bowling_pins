@@ -9,7 +9,8 @@ public interface Game {
     int NUMBER_OF_PINS_PER_FRAME = 10;
 
     /**
-     * Called each time the player rolls a ball.
+     * Called each time the player rolls a ball. Ignores negative numbers
+     * and anything greater than the initial number of pins per frame.
      *
      * @param pins the number of pins knocked down
      */

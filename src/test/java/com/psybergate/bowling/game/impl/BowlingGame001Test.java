@@ -1,20 +1,20 @@
 package com.psybergate.bowling.game.impl;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
+import com.psybergate.bowling.game.base.Game;
+import com.psybergate.bowling.game.util.ImplementationUtil;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.psybergate.bowling.game.base.Game;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BowlingGame001Test {
 
-    private Game game;
+    protected Game game;
 
     @Before
     public void setUp() {
-        this.game = new BowlingGame001();
+        this.game = ImplementationUtil.getInstance();
     }
 
     @Test

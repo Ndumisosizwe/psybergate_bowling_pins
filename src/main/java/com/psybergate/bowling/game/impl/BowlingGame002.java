@@ -3,14 +3,15 @@ package com.psybergate.bowling.game.impl;
 import com.psybergate.bowling.game.Frame;
 import com.psybergate.bowling.game.base.TenPinBowlingGame;
 
+
 /**
- * Implementation 001. Should be capable of all the basics of the game. No
- * spares, no strikes.
+ * Implementation 002. Should be capable of all the basics of the game plus spares.
  *
  * @author ndumiso.mhlongo
  */
-public class BowlingGame001 extends TenPinBowlingGame {
+public class BowlingGame002 extends TenPinBowlingGame {
 
+    @Override
     public void roll(int pins) {
         if (pins < 0) return;
         Frame frame = frameViewModel.frame;
@@ -30,5 +31,4 @@ public class BowlingGame001 extends TenPinBowlingGame {
 
         }
     }
-
 }

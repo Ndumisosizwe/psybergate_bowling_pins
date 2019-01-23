@@ -12,6 +12,8 @@ public class Frame {
     private int score;
     private final Integer[] rolls = new Integer[2];
     private boolean isFull;
+    private boolean hasSpareBonus;
+    private boolean hasStrikeBonus;
 
     public int getScore() {
         return score;
@@ -23,6 +25,22 @@ public class Frame {
 
     public boolean isFull() {
         return isFull;
+    }
+
+    public boolean isHasSpareBonus() {
+        return hasSpareBonus;
+    }
+
+    public void setHasSpareBonus(boolean hasSpareBonus) {
+        this.hasSpareBonus = hasSpareBonus;
+    }
+
+    public boolean isHasStrikeBonus() {
+        return hasStrikeBonus;
+    }
+
+    public void setHasStrikeBonus(boolean hasStrikeBonus) {
+        this.hasStrikeBonus = hasStrikeBonus;
     }
 
     public void setFull(boolean isFull) {
