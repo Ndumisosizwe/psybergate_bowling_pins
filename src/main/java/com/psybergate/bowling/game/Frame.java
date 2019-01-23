@@ -1,13 +1,44 @@
 package com.psybergate.bowling.game;
 
+import java.util.Arrays;
+
 /**
  * Encapsulates a <code>Frame</code> for a ten-pin bowling game.
- * 
+ *
  * @see Frame
  */
 public class Frame {
-	// Remove code on submission
-	private int score;
-	private final int[] rolls = new int[2];
 
+    private int score;
+    private final Integer[] rolls = new Integer[2];
+    private boolean isFull;
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public boolean isFull() {
+        return isFull;
+    }
+
+    public void setFull(boolean isFull) {
+        this.isFull = isFull;
+    }
+
+    public Integer[] getRolls() {
+        return rolls;
+    }
+
+    @Override
+    public String toString() {
+        return "Frame{" +
+                "score=" + score +
+                ", rolls=" + Arrays.toString(rolls) +
+                ", isFull=" + isFull +
+                '}';
+    }
 }

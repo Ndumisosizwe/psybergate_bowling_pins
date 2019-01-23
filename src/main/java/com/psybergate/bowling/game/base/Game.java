@@ -5,7 +5,9 @@ package com.psybergate.bowling.game.base;
  */
 public interface Game {
 
-	final int NUMBER_OF_PINS = 10;
+    int NUMBER_OF_FRAMES = 10;
+    int NUMBER_OF_PINS_PER_FRAME = 10;
+
     /**
      * Called each time the player rolls a ball.
      *
@@ -19,4 +21,9 @@ public interface Game {
      * @return The total score for each game.
      */
     int score();
+
+    /**
+     * @return true if this game is over.
+     */
+    boolean isGameOver();
 }
