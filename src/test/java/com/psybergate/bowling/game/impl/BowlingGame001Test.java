@@ -16,14 +16,16 @@ public class BowlingGame001Test {
     }
 
     @Test
-    public void testNewGameShouldHave10FramesAfterCreation(){
+    public void testNewGameShouldHave10FramesAfterCreation() {
+        assertEquals(10, game.size());
     }
 
     @Test
-    public void shouldAlwaysResultToScoreOfLessThan10() {
-        this.game.roll(5);
-        this.game.roll(5);
-        assertTrue(game.score() < 10);
+    public void shouldAlwaysResultToScoreOfLessThan10PerFrame() {
+        for (int i = 0; i < 2; i++) {
+            game.roll(5);
+        }
+        assertEquals(10, game.score());
     }
 
     @Test

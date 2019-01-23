@@ -2,19 +2,32 @@ package com.psybergate.bowling.game.base;
 
 import com.psybergate.bowling.game.Frame;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class AbstractGame implements Game {
 
-    private static final Frame[] FRAMES = new Frame[10];
-
+    private static final List<Frame> FRAMES = new ArrayList<>();
     static {
-        for (int i = 0; i < FRAMES.length; i++)
-            FRAMES[i] = new Frame();
+        for (int i = 0; i < 10; i++) {
+            FRAMES.add(new Frame());
+        }
     }
 
-    protected int totalScore;
+    private int score;
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    @Override
     public int score() {
-        return this.totalScore;
+        return this.score;
+    }
+
+    @Override
+    public int size() {
+        return FRAMES.size();
     }
 
 }

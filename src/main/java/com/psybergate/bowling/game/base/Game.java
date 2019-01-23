@@ -1,7 +1,7 @@
 package com.psybergate.bowling.game.base;
 
 /**
- * A typical game of a tenpin bowling game.
+ * A game of tenpin bowling game.
  */
 public interface Game {
 
@@ -18,5 +18,10 @@ public interface Game {
      * @return The total score for that game.
      */
     int score();
+
+    /**
+     * @return The number of frames in this game.
+     */
+    int size();
 
 }
