@@ -3,8 +3,9 @@ package com.psybergate.bowling.game.impl;
 import com.psybergate.bowling.game.base.TenPinBowlingGame;
 
 /**
- * @author Ndumi
- * @since 23-Jan-19
+ * Implementation 004. Should be capable of ALL rules described in the game.
+ *
+ * @author ndumiso.mhlongo
  */
 public class BowlingGame004 extends TenPinBowlingGame {
 
